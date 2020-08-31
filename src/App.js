@@ -17,7 +17,7 @@ function App() {
           </a>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to={'/grades'} className="nav-link">
+              <Link to={'/grade'} className="nav-link">
                 Grades
               </Link>
             </li>
@@ -30,9 +30,9 @@ function App() {
         </nav>
         <div className="container mt-3">
           <Switch>
-            <Route exact path={['/', '/grades']} component={GradeList} />
+            <Route exact path={['/', '/grade']} component={GradeList} />
             <Route exact path="/add" component={AddGrade} />
-            <Route path="/grades/:id" component={Grade} />
+            <Route path="/grade/:id" component={Grade} />
           </Switch>
         </div>
       </div>
