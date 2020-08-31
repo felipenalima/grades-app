@@ -9,7 +9,7 @@ const AddGrade = () => {
     type: '',
     value: '',
   };
-  const [grade, setGrade] = useState(initialGradeState);
+  const [grades, setGrade] = useState(initialGradeState);
   const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = (event) => {
