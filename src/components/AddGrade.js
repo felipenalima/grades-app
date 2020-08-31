@@ -14,15 +14,15 @@ const AddGrade = () => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setGrade({ ...grade, [name]: value });
+    setGrade({ ...grades, [name]: value });
   };
 
   const saveGrade = () => {
     var data = {
-      name: grade.name,
-      subject: grade.subject,
-      type: grade.type,
-      value: grade.value,
+      name: grades.name,
+      subject: grades.subject,
+      type: grades.type,
+      value: grades.value,
     };
 
     GradeDataService.create(data)
@@ -65,7 +65,7 @@ const AddGrade = () => {
               className="form-control"
               id="name"
               required
-              value={grade.name}
+              value={grades.name}
               onChange={handleInputChange}
               name="name"
             />
@@ -78,7 +78,7 @@ const AddGrade = () => {
               className="form-control"
               id="subject"
               required
-              value={grade.subject}
+              value={grades.subject}
               onChange={handleInputChange}
               name="subject"
             />
@@ -90,7 +90,7 @@ const AddGrade = () => {
               className="form-control"
               id="type"
               required
-              value={grade.type}
+              value={grades.type}
               onChange={handleInputChange}
               name="type"
             />
@@ -102,7 +102,7 @@ const AddGrade = () => {
               className="form-control"
               id="value"
               required
-              value={grade.value}
+              value={grades.value}
               onChange={handleInputChange}
               name="value"
             />
